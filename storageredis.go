@@ -489,7 +489,7 @@ func (rd RedisStorage) Stat(_ context.Context, key string) (certmagic.KeyInfo, e
 		Key:        key,
 		Modified:   data.Modified,
 		Size:       int64(len(data.Value)),
-		IsTerminal: false,
+		IsTerminal: true,
 	}, nil
 }
 
